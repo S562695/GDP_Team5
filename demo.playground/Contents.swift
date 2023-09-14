@@ -50,18 +50,20 @@ class LoginViewController: UIViewController {
         ])
     }
     
-    @objc func loginButtonTapped() {
-        // Handle login logic here
-        let username = usernameTextField.text
-        let password = passwordTextField.text
-        
-        // Add your login validation logic here
-        if username == "your_username" && password == "your_password" {
-            print("Login successful")
-        } else {
-            print("Login failed")
-        }
+   @objc func loginButtonTapped() {
+    guard let username = usernameTextField.text, let password = passwordTextField.text else {
+        print("Invalid input")
+        return
     }
+    if isValidCredentials(username: username, password: password) {
+        print("Login successful")
+    } else {
+        print("Login failed")
+    }
+}
+func isValidCredentials(username: String, password: String) -> Bool {
+    return username == "your_username" && password == "your_password"
+}
 }
 
 let loginViewController = LoginViewController()
