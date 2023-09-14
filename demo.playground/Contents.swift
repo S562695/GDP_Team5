@@ -69,6 +69,22 @@ func isValidCredentials(username: String, password: String) -> Bool {
 let loginViewController = LoginViewController()
 PlaygroundPage.current.liveView = loginViewController
 
+//adding register button to login page
+import UIKit
+
+class LoginViewController: UIViewController {
+
+    // Other code for your login view controller
+    
+    @IBAction func registerButtonTapped(_ sender: UIButton) {
+        // Perform the segue to the registration view controller
+        performSegue(withIdentifier: "RegisterSegue", sender: self)
+    }
+    
+    // Other methods and properties for your login view controller
+}
+
+
         
         
         
