@@ -94,6 +94,29 @@ func isValidCredentials(username: String, password: String) -> Bool {
 let loginViewController = LoginViewController()
 PlaygroundPage.current.liveView = loginViewController
 
+@IBAction func resetPasswordButtonTapped(_ sender: UIButton) {
+    // Validate user input (e.g., check if email is valid)
+    guard let emailAddress = emailTextField.text, !emailAddress.isEmpty else {
+        // Show an error message to the user indicating invalid input
+        return
+    }
+    
+    // Generate a unique reset token or code (e.g., a UUID)
+    let resetToken = UUID().uuidString
+
+    // Send a reset email or SMS to the user (implement this part using your email/SMS service)
+    sendResetEmail(to: emailAddress, withToken: resetToken)
+    
+    // Display a confirmation message
+    let confirmationAlert = UIAlertController(title: "Password Reset", message: "An email has been sent with instructions to reset your password.", preferredStyle: .alert)
+    confirmationAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+    present(confirmationAlert, animated: true, completion: nil)
+}
+
+func sendResetEmail(to email: String, withToken token: String) {
+    // Implement this method to send a reset email to the user using your email service
+    // You'll need to construct the email content and send it to the user's email address.
+}
 
 
 
