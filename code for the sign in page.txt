@@ -1,25 +1,32 @@
-override func viewDidLoad() {
-    super.viewDidLoad()
-    
-}
-
 @IBAction func signInButtonTapped(_ sender: UIButton) {
-   
-    guard let username = usernameTextField.text,
-          let password = passwordTextField.text else {
+    // Assuming you have outlets for your usernameTextField and passwordTextField
+    guard let username = usernameTextField.text, !username.isEmpty,
+          let password = passwordTextField.text, !password.isEmpty else {
+        // Display an alert or error message indicating that both fields are required.
+        showAlert(title: "Error", message: "Both username and password are required.")
         return
     }
+
     
-    
-    if username == "your_username" && password == "your_password" {
+    if isValidCredentials(username: username, password: password) {
         // Successful sign-in
         print("Sign-in successful!")
-        
-       
+        // You can navigate to the next screen or perform other actions here
     } else {
-       
-        print("Sign-in failed. Please check your credentials.")
-        
-        
+        // Failed sign-in
+        showAlert(title: "Error", message: "Sign-in failed. Please check your credentials.")
     }
+}
+
+
+func isValidCredentials(username: String, password: String) -> Bool {
+   
+    return username == "your_username" && password == "your_password"
+}
+
+
+func showAlert(title: String, message: String) {
+    let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+    present(alert, animated: true, completion: nil)
 }
