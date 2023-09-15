@@ -17,7 +17,7 @@ let submitButton = UIButton(type: .system)
 submitButton.setTitle("Submit", for: .normal)
 submitButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
 submitButton.tintColor = .white
-submitButton.backgroundColor = .blue
+submitButton.backgroundColor = .black
 submitButton.layer.cornerRadius = 5
 submitButton.translatesAutoresizingMaskIntoConstraints = false
 
