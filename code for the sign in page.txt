@@ -1,0 +1,25 @@
+override func viewDidLoad() {
+    super.viewDidLoad()
+    
+}
+
+@IBAction func signInButtonTapped(_ sender: UIButton) {
+   
+    guard let username = usernameTextField.text,
+          let password = passwordTextField.text else {
+        return
+    }
+    
+    
+    if username == "your_username" && password == "your_password" {
+        // Successful sign-in
+        print("Sign-in successful!")
+        
+       
+    } else {
+       
+        print("Sign-in failed. Please check your credentials.")
+        
+        
+    }
+}
