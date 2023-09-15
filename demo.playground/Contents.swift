@@ -93,7 +93,6 @@ func isValidCredentials(username: String, password: String) -> Bool {
 
 let loginViewController = LoginViewController()
 PlaygroundPage.current.liveView = loginViewController
-}
 
 
 
