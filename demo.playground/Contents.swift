@@ -12,10 +12,35 @@ class LoginViewController: UIViewController {
         
         view.backgroundColor = .white
         
-        usernameTextField.placeholder = "Username"
-        usernameTextField.borderStyle = .roundedRect
-        usernameTextField.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(usernameTextField)
+        // Create a UIButton
+let submitButton = UIButton(type: .system)
+submitButton.setTitle("Submit", for: .normal)
+submitButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+submitButton.tintColor = .white
+submitButton.backgroundColor = .blue
+submitButton.layer.cornerRadius = 5
+submitButton.translatesAutoresizingMaskIntoConstraints = false
+
+// Add the submitButton to the view
+view.addSubview(submitButton)
+
+// Define constraints for the submitButton
+NSLayoutConstraint.activate([
+    submitButton.topAnchor.constraint(equalTo: usernameTextField.bottomAnchor, constant: 20),
+    submitButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+    submitButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+    submitButton.heightAnchor.constraint(equalToConstant: 40)
+])
+
+// Add a target action for the button
+submitButton.addTarget(self, action: #selector(submitButtonTapped), for: .touchUpInside)
+
+// Function to handle button tap
+@objc func submitButtonTapped() {
+    // Add your code here to handle the button tap
+    print("Submit button tapped!")
+}
+
         
         passwordTextField.placeholder = "Password"
         passwordTextField.isSecureTextEntry = true
