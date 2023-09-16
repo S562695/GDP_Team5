@@ -74,8 +74,7 @@ submitButton.addTarget(self, action: #selector(submitButtonTapped), for: .touchU
             loginButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
         ])
     }
-    
-   @objc func loginButtonTapped() {
+    @objc func loginButtonTapped() {
     guard let username = usernameTextField.text, let password = passwordTextField.text else {
         print("Invalid input")
         return
