@@ -125,6 +125,12 @@ class DonateBloodViewController: UIViewController {
         // Add your UI elements and layout constraints for this view controller here.
     }
 }
+let settingsButton = UIButton()
+settingsButton.setTitle("Settings", for: .normal)
+settingsButton.backgroundColor = UIColor.blue
+settingsButton.titleLabel?.font = UIFont.systemFont(ofSize: 16)
+settingsButton.translatesAutoresizingMaskIntoConstraints = false
+
 
 
         
