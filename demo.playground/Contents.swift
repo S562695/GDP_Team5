@@ -117,7 +117,15 @@ func sendResetEmail(to email: String, withToken token: String) {
     // Implement this method to send a reset email to the user using your email service
     // You'll need to construct the email content and send it to the user's email address.
 }
-
+class DonateBloodViewController: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        view.backgroundColor = .red // You can set the background color or customize this view controller as needed for the "Donate Blood" tab.
+        
+        // Add your UI elements and layout constraints for this view controller here.
+    }
+}
 
 
         
