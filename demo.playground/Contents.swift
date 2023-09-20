@@ -10,15 +10,15 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .white
+        view.backgroundColor = .green
         
         // Create a UIButton
 let submitButton = UIButton(type: .system)
 submitButton.setTitle("Submit", for: .normal)
 submitButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
-submitButton.tintColor = .white
-submitButton.backgroundColor = .black
-submitButton.layer.cornerRadius = 5
+submitButton.tintColor = .green
+submitButton.backgroundColor = .orange
+submitButton.layer.cornerRadius = 6
 submitButton.translatesAutoresizingMaskIntoConstraints = false
 
 // Add the submitButton to the view
@@ -51,7 +51,7 @@ submitButton.addTarget(self, action: #selector(submitButtonTapped), for: .touchU
         loginButton.setTitle("Login", for: .normal)
         loginButton.backgroundColor = .blue
         loginButton.setTitleColor(.white, for: .normal)
-        loginButton.layer.cornerRadius = 5
+        loginButton.layer.cornerRadius = 6
         loginButton.translatesAutoresizingMaskIntoConstraints = false
         loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
         view.addSubview(loginButton)
