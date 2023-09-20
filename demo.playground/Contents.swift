@@ -131,7 +131,24 @@ settingsButton.backgroundColor = UIColor.blue
 settingsButton.titleLabel?.font = UIFont.systemFont(ofSize: 16)
 settingsButton.translatesAutoresizingMaskIntoConstraints = false
 
+struct ContentView: View {
+    var body: some View {
+        Button(action: {
+        }) {
+            Text("Register")
+                .padding()
+                .background(Color.blue)
+                .foregroundColor(.white)
+                .cornerRadius(10)
+        }
+    }
+}
 
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
 
         
         
