@@ -234,3 +234,4 @@ class RegistrationSuccessViewController: UIViewController {
                 ])
     }
 }
+
