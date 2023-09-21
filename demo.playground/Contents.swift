@@ -142,6 +142,24 @@ settingsButton.backgroundColor = UIColor.blue
 settingsButton.titleLabel?.font = UIFont.systemFont(ofSize: 16)
 settingsButton.translatesAutoresizingMaskIntoConstraints = false
 
+let loginViewController = LoginViewController()
+let donateBloodViewController = DonateBloodViewController()
+
+let tabBarController = UITabBarController()
+tabBarController.viewControllers = [loginViewController, donateBloodViewController]
+
+let loginTabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0) // Customize the icon and title as needed.
+let donateBloodTabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1) // Customize the icon and title as needed.
+
+loginViewController.tabBarItem = loginTabBarItem
+donateBloodViewController.tabBarItem = donateBloodTabBarItem
+
+let navigationController = UINavigationController(rootViewController: tabBarController)
+
+// Present the tab bar controller as the root view controller
+PlaygroundPage.current.liveView = navigationController
+
+
 struct ContentView: View {
     var body: some View {
         Button(action: {
