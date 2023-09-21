@@ -214,8 +214,23 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-        
-    
+class RegistrationSuccessViewController: UIViewController {
 
-
-
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let successLabel = UILabel()
+                successLabel.text = "Registration Successful!"
+                successLabel.textAlignment = .center
+                successLabel.font = UIFont.boldSystemFont(ofSize: 20)
+                successLabel.textColor = .white
+                successLabel.translatesAutoresizingMaskIntoConstraints = false
+                
+                view.addSubview(successLabel)
+                
+                // Define constraints for the successLabel
+                NSLayoutConstraint.activate([
+                    successLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                    successLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+                ])
+    }
+}
