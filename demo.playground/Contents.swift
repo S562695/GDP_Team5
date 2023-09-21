@@ -179,8 +179,41 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-        
-        
+//Added some text with LEARN MORE Button
+    @IBOutlet weak var infoLabel: UILabel!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Customize the label text
+        infoLabel.text = "We need volunteers to help donate blood.\nVolunteer opportunities include supporting blood donations and providing much-needed services to your community."
+
+        infoLabel.font = UIFont.systemFont(ofSize: 16)
+        infoLabel.textColor = UIColor.darkText
+        infoLabel.numberOfLines = 0 // Allow multiple lines
+
+        let learnMoreButton = UIButton(type: .system)
+        learnMoreButton.setTitle("Learn More", for: .normal)
+        learnMoreButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+        learnMoreButton.tintColor = UIColor.blue
+
+        learnMoreButton.addTarget(self, action: #selector(learnMoreButtonTapped), for: .touchUpInside)
+
+        view.addSubview(learnMoreButton)
+        learnMoreButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            learnMoreButton.topAnchor.constraint(equalTo: infoLabel.bottomAnchor, constant: 20),
+            learnMoreButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ])
+    }
+
+    @objc func learnMoreButtonTapped() {
+        // Implement what happens when the "Learn More" button is tapped
+        // For example, you can open a web page or navigate to another view controller.
+        print("Learn More button tapped!")
+    }
+}
+
         
     
 
