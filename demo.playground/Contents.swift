@@ -101,18 +101,29 @@ PlaygroundPage.current.liveView = loginViewController
     }
     
     // Generate a unique reset token or code (e.g., a UUID)
-    let resetToken = UUID().uuidString
-
-    // Send a reset email or SMS to the user (implement this part using your email/SMS service)
-    sendResetEmail(to: emailAddress, withToken: resetToken)
+    func sendResetEmail(to email: String, withToken token: String) {
+    // Configure your email service (Replace placeholders with actual values)
+    let smtpServer = "your-smtp-server.com"
+    let smtpPort = 587
+    let smtpUsername = "your-username"
+    let smtpPassword = "your-password"
     
-    // Display a confirmation message
-    let confirmationAlert = UIAlertController(title: "Password Reset", message: "An email has been sent with instructions to reset your password.", preferredStyle: .alert)
-    confirmationAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-    present(confirmationAlert, animated: true, completion: nil)
+    // Compose the email message
+    let subject = "Password Reset Request"
+    let body = "To reset your password, click on the following link: https://example.com/reset?token=\(token)"
+    
+    // Create an instance of the SMTP client (You need to implement this part)
+    let smtpClient = SMTPClient(server: smtpServer, port: smtpPort, username: smtpUsername, password: smtpPassword)
+    
+    // Send the email
+    do {
+        try smtpClient.sendEmail(to: email, subject: subject, body: body)
+        print("Password reset email sent successfully.")
+    } catch {
+        print("Error sending password reset email: \(error)")
+    }
 }
 
-func sendResetEmail(to email: String, withToken token: String) {
     // Implement this method to send a reset email to the user using your email service
     // You'll need to construct the email content and send it to the user's email address.
 }
