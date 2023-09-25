@@ -235,4 +235,19 @@ class RegistrationSuccessViewController: UIViewController {
                     successLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor)
                 ])
     }
+ // Added new "Donate Now" button which can navigate to the other page
+override func viewDidLoad() {
+        super.viewDidLoad()
+        createButton()
+    }
+    func createButton() {
+        let button = UIButton(type: .system)
+        button.setTitle("Donate Now", for: .normal)
+        button.frame = CGRect(x: 100, y: 200, width: 200, height: 50)
+        button.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
+        view.addSubview(button)
+    }
+    @IBAction func buttonTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: "YourSegueIdentifier", sender: self)
+    }
 }*/
