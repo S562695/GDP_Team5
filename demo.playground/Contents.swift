@@ -315,6 +315,17 @@ let forgotPasswordButton: UIButton = {
     }
     
     self.present(activityViewController, animated: true, completion: nil)
+
+    @IBAction func clearButtonTapped(_ sender: UIButton) {
+    // Clear the username and password text fields
+    usernameTextField.text = ""
+    passwordTextField.text = ""
+    
+    // You can also resign the first responder to dismiss the keyboard
+    usernameTextField.resignFirstResponder()
+    passwordTextField.resignFirstResponder()
+}
+
 }
 
 
