@@ -325,6 +325,17 @@ let forgotPasswordButton: UIButton = {
     usernameTextField.resignFirstResponder()
     passwordTextField.resignFirstResponder()
 }
+    @IBOutlet weak var textField1: UITextField!
+    @IBOutlet weak var textField2: UITextField!
+    // Add outlets for other elements as needed
+    func resetUI() {
+      textField1.text = ""
+      textField2.text = ""
+    // Reset other UI elements as needed
+}
+    @IBAction func resetButtonTapped(_ sender: UIButton) {
+     resetUI()
+}
 
 }
 
