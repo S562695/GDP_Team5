@@ -251,3 +251,13 @@ override func viewDidLoad() {
         performSegue(withIdentifier: "YourSegueIdentifier", sender: self)
     }
 }*/
+
+
+//UI for "Forgot Password" View:
+let forgotPasswordButton: UIButton = {
+    let button = UIButton(type: .system)
+    button.setTitle("Forgot Password?", for: .normal)
+    button.addTarget(self, action: #selector(forgotPasswordButtonTapped), for: .touchUpInside)
+    return button
+}()
+
