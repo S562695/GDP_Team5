@@ -11,6 +11,8 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .green
+        shareButton.addTarget(self, action: #selector(shareButtonTapped), for: .touchUpInside)
+
         
         // Create a UIButton
         let submitButton = UIButton(type: .system)
@@ -34,7 +36,7 @@ class LoginViewController: UIViewController {
     }
 }
 
-/*// Add a target action for the button
+// Add a target action for the button
 submitButton.addTarget(self, action: #selector(submitButtonTapped), for: .touchUpInside)
 
 // Function to handle button tap
@@ -125,6 +127,8 @@ PlaygroundPage.current.liveView = loginViewController
         print("Error sending password reset email: \(error)")
     }
 }
+    
+    
 
     // Implement this method to send a reset email to the user using your email service
     // You'll need to construct the email content and send it to the user's email address.
@@ -250,7 +254,7 @@ override func viewDidLoad() {
     @IBAction func buttonTapped(_ sender: UIButton) {
         performSegue(withIdentifier: "YourSegueIdentifier", sender: self)
     }
-}*/
+}
 
 
 //UI for "Forgot Password" View:
@@ -260,4 +264,44 @@ let forgotPasswordButton: UIButton = {
     button.addTarget(self, action: #selector(forgotPasswordButtonTapped), for: .touchUpInside)
     return button
 }()
+
+
+@objc func shareButtonTapped() {
+    // Content to be shared (e.g., a message, URL, or image)
+    let textToShare = "Check out this amazing Blood Bank app!"
+    let appURL = URL(string: "https://www.yourappwebsite.com") // Replace with your app's website URL
+    
+    // Create an array of items to share
+    var itemsToShare: [Any] = [textToShare]
+    
+    // Add the app URL if available
+    if let appURL = appURL {
+        itemsToShare.append(appURL)
+    }
+    
+    // Create the activity view controller
+    let activityViewController = UIActivityViewController(
+        activityItems: itemsToShare,
+        applicationActivities: nil
+    )
+    
+    // Exclude specific sharing options if needed
+    activityViewController.excludedActivityTypes = [
+        .addToReadingList,
+        .assignToContact,
+        .print,
+        .saveToCameraRoll,
+    ]
+    
+    // Present the activity view controller
+    if let popoverController = activityViewController.popoverPresentationController {
+        popoverController.sourceView = self.view
+        popoverController.sourceRect = CGRect(x: shareButton.bounds.midX, y: shareButton.bounds.maxY, width: 0, height: 0)
+        popoverController.permittedArrowDirections = []
+    }
+    
+    self.present(activityViewController, animated: true, completion: nil)
+}
+
+
 
