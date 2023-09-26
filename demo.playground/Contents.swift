@@ -256,6 +256,20 @@ override func viewDidLoad() {
     }
 }
 
+// // Adding  the back button tap
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.title = "Main Screen"
+        
+        let backButton = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(backButtonTapped))
+        self.navigationItem.leftBarButtonItem = backButton
+    }
+    
+    @objc func backButtonTapped() {
+        self.dismiss(animated: true, completion: nil)
+    }
+}
+
 
 //UI for "Forgot Password" View:
 let forgotPasswordButton: UIButton = {
