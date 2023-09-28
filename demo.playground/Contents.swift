@@ -339,5 +339,23 @@ let forgotPasswordButton: UIButton = {
 
 }
 
+// Create a UILabel
+let titleLabel = UILabel()
+        
+        // Set label properties
+        titleLabel.text = "Welcome to Blood Bank"
+        titleLabel.textAlignment = .center
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 24)
+        titleLabel.textColor = .black
 
+        // Add constraints to position the label at the top of the view
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(titleLabel)
+
+        NSLayoutConstraint.activate([
+            titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20), 
+            titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16), 
+            titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
+        ])
+            
 
