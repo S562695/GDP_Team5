@@ -434,4 +434,38 @@ override func viewDidLoad() {
 @IBAction func toggleDropdown(_ sender: UIButton) {
     isDropdownVisible.toggle()
     tableView.isHidden = !isDropdownVisible
+
+
+    import UIKit
+
+class BloodBankViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
+    @IBOutlet weak var tableView: UITableView!
+    
+    // Data source, replace this with your own data structure
+    var bloodDonors: [BloodDonor] = []
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Set up your table view data source and delegate
+        tableView.delegate = self
+        tableView.dataSource = self
+    }
+    
+    // Implement UITableViewDataSource methods here
+    
+    // Action method for the delete button
+    @IBAction func deleteButtonTapped(_ sender: UIButton) {
+        // Find the index of the cell containing the delete button
+        let point = sender.convert(CGPoint.zero, to: tableView)
+        if let indexPath = tableView.indexPathForRow(at: point) {
+            // Remove the corresponding record from your data source
+            bloodDonors.remove(at: indexPath.row)
+            
+            // Reload the table view to reflect the changes
+            tableView.reloadData()
+        }
+    }
+}
+
 }
