@@ -378,5 +378,18 @@ let titleLabel = UILabel()
             titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16), 
             titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
         ])
-            
-
+    // save button    
+  @IBOutlet weak var donorNameTextField: UITextField!
+  @IBOutlet weak var bloodTypeTextField: UITextField!
+  // Add outlets for other elements as needed
+  struct BloodBankData {
+    var donorName: String = ""
+    var bloodType: String = ""
+    // Add other properties as needed
+}
+  var bloodBankData = BloodBankData()
+  @IBAction func saveButtonTapped(_ sender: UIButton) {
+    bloodBankData.donorName = donorNameTextField.text ?? ""
+    bloodBankData.bloodType = bloodTypeTextField.text ?? ""
+    // Update other properties of bloodBankData as needed
+}
