@@ -393,3 +393,28 @@ let titleLabel = UILabel()
     bloodBankData.bloodType = bloodTypeTextField.text ?? ""
     // Update other properties of bloodBankData as needed
 }
+//floating action button
+override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Create a UIButton for the FAB
+        let fabButton = UIButton(type: .custom)
+        fabButton.frame = CGRect(x: view.frame.size.width - 80, y: view.frame.size.height - 80, width: 60, height: 60)
+        fabButton.backgroundColor = UIColor.blue
+        fabButton.layer.cornerRadius = fabButton.frame.size.width / 2
+        fabButton.layer.shadowColor = UIColor.gray.cgColor
+        fabButton.layer.shadowOffset = CGSize(width: 0, height: 4)
+        fabButton.layer.shadowRadius = 6
+        fabButton.layer.shadowOpacity = 0.8
+
+        fabButton.setTitle("+", for: .normal)
+        fabButton.titleLabel?.font = UIFont.systemFont(ofSize: 30)
+
+        fabButton.addTarget(self, action: #selector(fabButtonTapped), for: .touchUpInside)
+
+        view.addSubview(fabButton)
+    }
+
+    @objc func fabButtonTapped() {
+        print("FAB Button Tapped!")
+    }
