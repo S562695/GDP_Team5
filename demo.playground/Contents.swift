@@ -418,3 +418,20 @@ override func viewDidLoad() {
     @objc func fabButtonTapped() {
         print("FAB Button Tapped!")
     }
+
+}
+
+@IBOutlet weak var dropdownButton: UIButton!
+@IBOutlet weak var tableView: UITableView!
+var isDropdownVisible = false
+override func viewDidLoad() {
+    super.viewDidLoad()
+        
+        // Initialize your table view data source and delegate if needed
+    tableView.isHidden = true
+}
+    
+@IBAction func toggleDropdown(_ sender: UIButton) {
+    isDropdownVisible.toggle()
+    tableView.isHidden = !isDropdownVisible
+}
