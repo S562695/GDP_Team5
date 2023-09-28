@@ -338,6 +338,27 @@ let forgotPasswordButton: UIButton = {
 }
 
 }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Create a navigation bar
+        let navigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 44))
+        navigationBar.backgroundColor = UIColor.blue // Set the background color
+        let navigationItem = UINavigationItem()
+        navigationItem.title = "My App"
+        let leftButton = UIBarButtonItem(title: "Left", style: .plain, target: self, action: #selector(leftButtonTapped))
+        navigationItem.leftBarButtonItem = leftButton
+      
+        let rightButton = UIBarButtonItem(title: "Right", style: .plain, target: self, action: #selector(rightButtonTapped))
+        navigationItem.rightBarButtonItem = rightButton
+    
+        navigationBar.items = [navigationItem]
+        
+        view.addSubview(navigationBar)
+    }
+    
+}
+
 
 // Create a UILabel
 let titleLabel = UILabel()
