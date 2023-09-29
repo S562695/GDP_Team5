@@ -504,4 +504,40 @@ class BloodBankViewController: UIViewController, UITableViewDelegate, UITableVie
 
 }
 
+class BloodTypeViewController: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Create and display blood type icons
+        
+        let bloodTypeAImage = UIImage(systemName: "heart.fill")
+        let bloodTypeBImage = UIImage(systemName: "heart.fill")
+        let bloodTypeABImage = UIImage(systemName: "heart.fill")
+        let bloodTypeOImage = UIImage(systemName: "heart.fill")
+        
+        // Create UIImageViews to display the icons
+        
+        let bloodTypeAImageView = UIImageView(image: bloodTypeAImage)
+        let bloodTypeBImageView = UIImageView(image: bloodTypeBImage)
+        let bloodTypeABImageView = UIImageView(image: bloodTypeABImage)
+        let bloodTypeOImageView = UIImageView(image: bloodTypeOImage)
+        
+        // Position and add the image views to the view
+        
+        let iconSize: CGFloat = 64.0
+        let spacing: CGFloat = 20.0
+        
+        bloodTypeAImageView.frame = CGRect(x: 20, y: 100, width: iconSize, height: iconSize)
+        bloodTypeBImageView.frame = CGRect(x: 20 + iconSize + spacing, y: 100, width: iconSize, height: iconSize)
+        bloodTypeABImageView.frame = CGRect(x: 20 + 2 * (iconSize + spacing), y: 100, width: iconSize, height: iconSize)
+        bloodTypeOImageView.frame = CGRect(x: 20 + 3 * (iconSize + spacing), y: 100, width: iconSize, height: iconSize)
+        
+        view.addSubview(bloodTypeAImageView)
+        view.addSubview(bloodTypeBImageView)
+        view.addSubview(bloodTypeABImageView)
+        view.addSubview(bloodTypeOImageView)
+    }
+}
+
+
 }
