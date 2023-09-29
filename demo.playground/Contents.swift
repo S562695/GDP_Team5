@@ -466,6 +466,21 @@ class BloodBankViewController: UIViewController, UITableViewDelegate, UITableVie
             tableView.reloadData()
         }
     }
+    //Donor profile picture
+    @IBOutlet weak var profileImageView: UIImageView!
+    if let imageUrl = URL(string: "https://example.com/donor_profile_image.jpg") {
+    DispatchQueue.global().async {
+        if let data = try? Data(contentsOf: imageUrl) {
+            let image = UIImage(data: data)
+            DispatchQueue.main.async {
+                self.profileImageView.image = image
+            }
+        }
+    }
+}
+     let placeholderImage = UIImage(named: "placeholder_image")
+     self.profileImageView.image = placeholderImage
+
 }
 
 }
