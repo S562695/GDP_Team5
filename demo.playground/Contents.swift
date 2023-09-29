@@ -466,6 +466,24 @@ class BloodBankViewController: UIViewController, UITableViewDelegate, UITableVie
             tableView.reloadData()
         }
     }
+
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Create a UIImageView
+        let imageView = UIImageView(frame: CGRect(x: 50, y: 50, width: 100, height: 100))
+
+        if let bloodBagImage = UIImage(named: "blood_bag_icon") {
+            imageView.image = bloodBagImage
+        } else {
+            print("Error: Blood bag icon image not found.")
+        }
+        view.addSubview(imageView)
+    }
+
+
+    
     //Donor profile picture
     @IBOutlet weak var profileImageView: UIImageView!
     if let imageUrl = URL(string: "https://example.com/donor_profile_image.jpg") {
@@ -480,6 +498,9 @@ class BloodBankViewController: UIViewController, UITableViewDelegate, UITableVie
 }
      let placeholderImage = UIImage(named: "placeholder_image")
      self.profileImageView.image = placeholderImage
+
+
+    
 
 }
 
