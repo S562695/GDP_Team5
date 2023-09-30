@@ -576,5 +576,21 @@ class BloodTypeViewController: UIViewController {
             print("App icon changed successfully")
         }
     }
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    // Return the number of items in your collection view
+    return dataCount
+}
+
+func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "customCell", for: indexPath) as! CustomCollectionViewCell
+    
+    // Configure the cell with data
+    let item = data[indexPath.item]
+    cell.titleLabel.text = item.title
+    cell.imageView.image = UIImage(named: item.imageName)
+    
+    return cell
+}
+
 }
 }
