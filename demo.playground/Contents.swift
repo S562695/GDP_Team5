@@ -538,6 +538,14 @@ class BloodTypeViewController: UIViewController {
         view.addSubview(bloodTypeOImageView)
     }
 }
-
-
+    //App logo 
+    if UIApplication.shared.supportsAlternateIcons {
+    UIApplication.shared.setAlternateIconName("AlternateIconName") { error in
+        if let error = error {
+            print("Error setting app icon: \(error.localizedDescription)")
+        } else {
+            print("App icon changed successfully")
+        }
+    }
+}
 }
