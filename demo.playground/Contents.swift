@@ -538,6 +538,35 @@ class BloodTypeViewController: UIViewController {
         view.addSubview(bloodTypeOImageView)
     }
 }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Create a UIButton
+        let scheduleAppointmentButton = UIButton(type: .system)
+        
+        scheduleAppointmentButton.setTitle("Schedule Appointment", for: .normal)
+        scheduleAppointmentButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+        scheduleAppointmentButton.setTitleColor(.white, for: .normal)
+        scheduleAppointmentButton.backgroundColor = UIColor.blue
+        
+        scheduleAppointmentButton.addTarget(self, action: #selector(scheduleAppointmentButtonTapped), for: .touchUpInside)
+        scheduleAppointmentButton.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(scheduleAppointmentButton)
+        
+        NSLayoutConstraint.activate([
+            scheduleAppointmentButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            scheduleAppointmentButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            scheduleAppointmentButton.widthAnchor.constraint(equalToConstant: 200),
+            scheduleAppointmentButton.heightAnchor.constraint(equalToConstant: 50)
+        ])
+    }
+
+    @objc func scheduleAppointmentButtonTapped() {
+    }
+}
+
+    
     //App logo 
     if UIApplication.shared.supportsAlternateIcons {
     UIApplication.shared.setAlternateIconName("AlternateIconName") { error in
