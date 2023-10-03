@@ -630,3 +630,9 @@ registrationFormView.addSubview(bodyTextLabel2)
 // Add error label for validation feedback
 registrationFormView.addSubview(errorLabel)
 
+let homePageView = UIView()
+
+homePageView.addSubview(titleLabel)
+
+homePageView.addSubview(bodyTextLabel1)
+homePageView.addSubview(bodyTextLabel2)
