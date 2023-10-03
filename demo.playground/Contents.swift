@@ -604,3 +604,20 @@ let loginFormView = UIView()
 loginFormView.addSubview(titleLabel)
 loginFormView.addSubview(errorLabel)
 }
+
+// Assuming you have a UIView for your registration form
+let registrationFormView = UIView()
+
+// Add a title label
+registrationFormView.addSubview(titleLabel)
+
+// Add subtitle labels
+registrationFormView.addSubview(subtitleLabel)
+
+// Add body text labels for various fields
+registrationFormView.addSubview(bodyTextLabel1)
+registrationFormView.addSubview(bodyTextLabel2)
+
+// Add error label for validation feedback
+registrationFormView.addSubview(errorLabel)
+
