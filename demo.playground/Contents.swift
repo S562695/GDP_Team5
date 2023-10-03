@@ -636,3 +636,9 @@ homePageView.addSubview(titleLabel)
 
 homePageView.addSubview(bodyTextLabel1)
 homePageView.addSubview(bodyTextLabel2)
+
+let bodyTextLabel = UILabel()
+bodyTextLabel.text = "Donor ID: 12345\nBlood Type: O+"
+bodyTextLabel.font = UIFont.systemFont(ofSize: 14)
+bodyTextLabel.numberOfLines = 0 // Allow multiple lines for detailed information
+bodyTextLabel.textAlignment = .left
