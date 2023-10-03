@@ -591,6 +591,12 @@ func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath:
     
     return cell
 }
+    //subtitle label
+let subtitleLabel = UILabel()
+subtitleLabel.text = "Find donors near you"
+subtitleLabel.font = UIFont.systemFont(ofSize: 16)
+subtitleLabel.textAlignment = .center
+subtitleLabel.textColor = UIColor.gray
 
 }
 }
