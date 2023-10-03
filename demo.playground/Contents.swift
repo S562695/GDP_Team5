@@ -599,4 +599,8 @@ subtitleLabel.textAlignment = .center
 subtitleLabel.textColor = UIColor.gray
 
 }
+// login form
+let loginFormView = UIView()
+loginFormView.addSubview(titleLabel)
+loginFormView.addSubview(errorLabel)
 }
