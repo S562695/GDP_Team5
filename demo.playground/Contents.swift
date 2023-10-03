@@ -591,6 +591,15 @@ func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath:
     
     return cell
 }
+        //Error Label
+        let errorLabel = UILabel()
+errorLabel.text = "Invalid username or password. Please try again."
+errorLabel.font = UIFont.systemFont(ofSize: 14)
+errorLabel.textColor = UIColor.red
+errorLabel.textAlignment = .center
+errorLabel.isHidden = true // Initially hide it; show it when there's an error
+
+        
     //subtitle label
 let subtitleLabel = UILabel()
 subtitleLabel.text = "Find donors near you"
