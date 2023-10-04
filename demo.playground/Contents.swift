@@ -142,11 +142,6 @@ class DonateBloodViewController: UIViewController {
         // Add your UI elements and layout constraints for this view controller here.
     }
 }
-let settingsButton = UIButton()
-settingsButton.setTitle("Settings", for: .normal)
-settingsButton.backgroundColor = UIColor.blue
-settingsButton.titleLabel?.font = UIFont.systemFont(ofSize: 16)
-settingsButton.translatesAutoresizingMaskIntoConstraints = false
 
 let loginViewController = LoginViewController()
 let donateBloodViewController = DonateBloodViewController()
@@ -393,33 +388,6 @@ let titleLabel = UILabel()
     bloodBankData.bloodType = bloodTypeTextField.text ?? ""
     // Update other properties of bloodBankData as needed
 }
-//floating action button
-override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Create a UIButton for the FAB
-        let fabButton = UIButton(type: .custom)
-        fabButton.frame = CGRect(x: view.frame.size.width - 80, y: view.frame.size.height - 80, width: 60, height: 60)
-        fabButton.backgroundColor = UIColor.blue
-        fabButton.layer.cornerRadius = fabButton.frame.size.width / 2
-        fabButton.layer.shadowColor = UIColor.gray.cgColor
-        fabButton.layer.shadowOffset = CGSize(width: 0, height: 4)
-        fabButton.layer.shadowRadius = 6
-        fabButton.layer.shadowOpacity = 0.8
-
-        fabButton.setTitle("+", for: .normal)
-        fabButton.titleLabel?.font = UIFont.systemFont(ofSize: 30)
-
-        fabButton.addTarget(self, action: #selector(fabButtonTapped), for: .touchUpInside)
-
-        view.addSubview(fabButton)
-    }
-
-    @objc func fabButtonTapped() {
-        print("FAB Button Tapped!")
-    }
-
-}
 
 @IBOutlet weak var dropdownButton: UIButton!
 @IBOutlet weak var tableView: UITableView!
@@ -642,3 +610,9 @@ bodyTextLabel.text = "Donor ID: 12345\nBlood Type: O+"
 bodyTextLabel.font = UIFont.systemFont(ofSize: 14)
 bodyTextLabel.numberOfLines = 0 // Allow multiple lines for detailed information
 bodyTextLabel.textAlignment = .left
+
+
+
+
+@IBAction func acceptorImage(_sender: Any){
+}
