@@ -619,4 +619,4 @@ bodyTextLabel.textAlignment = .left
 @IBAction func acceptorImage(_sender: Any){
     imageViewOL.image = UIImage(named:"acceptor")
 }
-
+@IBOutlet weak var homePageLabel: UILabel! //title to home page
