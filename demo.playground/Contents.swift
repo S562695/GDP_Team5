@@ -611,10 +611,12 @@ bodyTextLabel.font = UIFont.systemFont(ofSize: 14)
 bodyTextLabel.numberOfLines = 0 // Allow multiple lines for detailed information
 bodyTextLabel.textAlignment = .left
 
-
-
+@IBOutlet weak var acceptorLBL: UILabel! 
+@IBAction func donorImage(_ sender: Any) {
+    
+}
 
 @IBAction func acceptorImage(_sender: Any){
+    imageViewOL.image = UIImage(named:"acceptor")
 }
-@IBAction func donorImage(_ sender: Any) {
-}
+
