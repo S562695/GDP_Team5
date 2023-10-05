@@ -620,5 +620,6 @@ bodyTextLabel.textAlignment = .left
     imageViewOL.image = UIImage(named:"acceptor")
 }
 @IBOutlet weak var homePageLabel: UILabel! //title to home page
+ @IBOutlet weak var donorLBL: UILabel!
 
 
