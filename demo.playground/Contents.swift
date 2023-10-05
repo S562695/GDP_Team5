@@ -616,3 +616,5 @@ bodyTextLabel.textAlignment = .left
 
 @IBAction func acceptorImage(_sender: Any){
 }
+@IBAction func donorImage(_ sender: Any) {
+}
