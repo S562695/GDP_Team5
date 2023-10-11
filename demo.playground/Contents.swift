@@ -623,5 +623,5 @@ bodyTextLabel.textAlignment = .left
  @IBOutlet weak var donorLBL: UILabel!
 @IBOutlet weak var headerLBL: UILabel!
 @IBOutlet weak var usernameTF: UITextField! //creating username textfield in login page
-
+@IBOutlet var cancelBtn: [UIButton]!
 
