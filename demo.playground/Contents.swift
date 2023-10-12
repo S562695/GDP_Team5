@@ -627,3 +627,5 @@ bodyTextLabel.textAlignment = .left
 @IBOutlet var cancelBtn: [UIButton]!
 @IBOutlet weak var passwordTF: UITextField!
 
+@IBAction func loginClicked(_ sender: UIButton) {
+    }
