@@ -644,3 +644,6 @@ bodyTextLabel.textAlignment = .left
             self.showAlert(title: "Success", message: "Registration successful!")
         }                                                        
     }
+    func showAlert(title: String, message: String) {
+        
+    }
