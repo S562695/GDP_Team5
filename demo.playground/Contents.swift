@@ -639,4 +639,8 @@ bodyTextLabel.textAlignment = .left
             // An error occurred during registration
             self.showAlert(title: "Error", message: error.localizedDescription)
         }
+           else {
+            // Registration successful
+            self.showAlert(title: "Success", message: "Registration successful!")
+        }                                                        
     }
