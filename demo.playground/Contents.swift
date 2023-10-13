@@ -628,4 +628,10 @@ bodyTextLabel.textAlignment = .left
 @IBOutlet weak var passwordTF: UITextField!
 
 @IBAction func loginClicked(_ sender: UIButton) {
+     guard let email = emailTF.text, !email.isEmpty,
+          let password = passwordTF.text, !password.isEmpty else {
+        // Display an error message if fields are empty
+        showAlert(title: "Error", message: "Please enter both email and password.")
+        return
+    }
     }
