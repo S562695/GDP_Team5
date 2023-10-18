@@ -654,4 +654,6 @@ bodyTextLabel.textAlignment = .left
     @objc func shareButtonTapped() { 
         let textToShare = "Check out this amazing Blood Bank app!"
         let appURL = URL(string: "https://www.yourappwebsite.com") 
+        // Create an array of items to share
+    var itemsToShare: [Any] = [textToShare]
     }
