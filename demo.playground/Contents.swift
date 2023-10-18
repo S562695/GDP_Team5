@@ -634,7 +634,7 @@ bodyTextLabel.textAlignment = .left
         showAlert(title: "Error", message: "Please enter both email and password.")
         return
     }
-    Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
+    Auth.auth().signUp(withEmail: email, password: password) { (authResult, error) in
         if let error = error {
             // An error occurred during registration
             self.showAlert(title: "Error", message: error.localizedDescription)
