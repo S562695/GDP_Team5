@@ -660,4 +660,7 @@ bodyTextLabel.textAlignment = .left
     if let appURL = appURL {
         itemsToShare.append(appURL)
     }
+        let activityViewController = UIActivityViewController(
+        activityItems: itemsToShare,
+        applicationActivities: nil)
     }
