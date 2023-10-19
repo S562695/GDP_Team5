@@ -656,4 +656,8 @@ bodyTextLabel.textAlignment = .left
         let appURL = URL(string: "https://www.yourappwebsite.com") 
         // Create an array of items to share
     var itemsToShare: [Any] = [textToShare]
+        // Add the app URL if available
+    if let appURL = appURL {
+        itemsToShare.append(appURL)
+    }
     }
