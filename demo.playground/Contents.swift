@@ -664,3 +664,9 @@ bodyTextLabel.textAlignment = .left
         activityItems: itemsToShare,
         applicationActivities: nil)
     }
+    activityViewController.excludedActivityTypes = [
+        .addToReadingList,
+        .assignToContact,
+        .print,
+        .saveToCameraRoll,
+    ]
