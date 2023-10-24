@@ -670,3 +670,5 @@ bodyTextLabel.textAlignment = .left
         .print,
         .saveToCameraRoll,
     ]
+
+    @IBOutlet var scheduleAppointmentBtn: [UIButton]!
