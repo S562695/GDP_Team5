@@ -681,6 +681,8 @@ class HomeVC: UIViewController {
          @IBOutlet var scheduleAppointmentBtn: [UIButton]!
          @IBOutlet var titleLBL: [UILabel]!
          @IBOutlet var donorBtn: [UIButton]!
+        @IBAction func scheduleAppointmentClicked(_ sender: UIButton) {
+    }
     }
 
    
