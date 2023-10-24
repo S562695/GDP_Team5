@@ -677,7 +677,9 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+
+         @IBOutlet var scheduleAppointmentBtn: [UIButton]!
+         @IBOutlet var titleLBL: [UILabel]!
     }
 
-    @IBOutlet var scheduleAppointmentBtn: [UIButton]!
-    @IBOutlet var titleLBL: [UILabel]!
+   
