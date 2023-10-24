@@ -680,6 +680,7 @@ class HomeVC: UIViewController {
 
          @IBOutlet var scheduleAppointmentBtn: [UIButton]!
          @IBOutlet var titleLBL: [UILabel]!
+         @IBOutlet var donorBtn: [UIButton]!
     }
 
    
