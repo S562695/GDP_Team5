@@ -694,6 +694,10 @@ class DonorProfileViewController: UIViewController {
     @IBOutlet weak var idLabel: UILabel! 
     var donor: Donor!
     @IBOutlet weak var nameLabel: UILabel!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        //updateUI()
+    }
 }
     
    
