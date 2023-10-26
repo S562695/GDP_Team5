@@ -689,4 +689,5 @@ class HomeVC: UIViewController {
     }
 class DonorProfileViewController: UIViewController { 
 }   
+    @IBOutlet weak var medicalReportLabel: UILabel! 
    
