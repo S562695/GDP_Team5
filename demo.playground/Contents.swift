@@ -692,6 +692,8 @@ class DonorProfileViewController: UIViewController {
     @IBOutlet weak var bloodGroupLabel: UILabel! 
     @IBOutlet weak var medicalReportLabel: UILabel! 
     @IBOutlet weak var idLabel: UILabel! 
+    var donor: Donor!
+    @IBOutlet weak var nameLabel: UILabel!
 }
     
    
