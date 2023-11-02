@@ -707,6 +707,8 @@ class DonorProfileViewController: UIViewController {
         nameLabel.text = donor.name
         idLabel.text = donor.id 
         bloodGroupLabel.text = donor.bloodGroup
+        medicalReportLabel.text = donor.medicalReport
+        diseaseLabel.text = donor.disease
     } 
     
    
