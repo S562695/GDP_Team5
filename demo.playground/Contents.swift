@@ -704,7 +704,7 @@ class DonorProfileViewController: UIViewController {
         updateUI()
     }     
     func updateUI() {    
-    
+    nameLabel.text = donor.name
     } 
     
    
