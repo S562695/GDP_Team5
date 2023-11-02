@@ -699,5 +699,9 @@ class DonorProfileViewController: UIViewController {
         //updateUI()
     }
 }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        updateUI()
+    }       
     
    
