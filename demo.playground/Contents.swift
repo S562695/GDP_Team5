@@ -704,8 +704,9 @@ class DonorProfileViewController: UIViewController {
         updateUI()
     }     
     func updateUI() {    
-    nameLabel.text = donor.name
+        nameLabel.text = donor.name
         idLabel.text = donor.id 
+        bloodGroupLabel.text = donor.bloodGroup
     } 
     
    
