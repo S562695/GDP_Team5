@@ -710,5 +710,7 @@ class DonorProfileViewController: UIViewController {
         medicalReportLabel.text = donor.medicalReport
         diseaseLabel.text = donor.disease
     } 
-    
+    import UIKit
+
+class RequestCreationViewController: UIViewController {      }   
    
