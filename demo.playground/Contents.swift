@@ -714,7 +714,7 @@ class DonorProfileViewController: UIViewController {
 
 class RequestCreationViewController: UIViewController {   
 
-    
+    @IBOutlet weak var bloodTypeTextField: UITextField!
     @IBAction func createRequestButtonTapped(_ sender: UIButton) { 
         guard let patientName = patientNameTextField.text,
           let bloodType = bloodTypeTextField.text,
