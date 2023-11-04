@@ -713,6 +713,12 @@ class DonorProfileViewController: UIViewController {
     import UIKit
 
 class RequestCreationViewController: UIViewController {   
-@IBAction func createRequestButtonTapped(_ sender: UIButton) {   
-}}   
+
+    
+    @IBAction func createRequestButtonTapped(_ sender: UIButton) { 
+        guard let patientName = patientNameTextField.text,
+          let bloodType = bloodTypeTextField.text,
+          let requestDetails = requestDetailsTextView.text
+    }
+}   
    
