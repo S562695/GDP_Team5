@@ -710,7 +710,7 @@ class DonorProfileViewController: UIViewController {
         medicalReportLabel.text = donor.medicalReport
         diseaseLabel.text = donor.disease
     } 
-    import UIKit
+   // import UIKit
 
 class RequestCreationViewController: UIViewController {  
     
@@ -722,6 +722,12 @@ class RequestCreationViewController: UIViewController {
         guard let patientName = patientNameTextField.text,
           let bloodType = bloodTypeTextField.text,
           let requestDetails = requestDetailsTextView.text
+        return
     }
+    let newRequest = BloodRequest(
+        
+
+
+    )
 }   
    
