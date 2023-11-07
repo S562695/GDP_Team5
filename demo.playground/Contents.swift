@@ -725,7 +725,11 @@ class RequestCreationViewController: UIViewController {
         return
     }
     let newRequest = BloodRequest(
-        
+
+
+
+requestDetails: requestDetails,
+        isFulfilled: false         // Adding request details and assuming the request is not fulfilled initially 
 
 
     )
