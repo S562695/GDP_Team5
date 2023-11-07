@@ -728,7 +728,8 @@ class RequestCreationViewController: UIViewController {
         patientName: patientName,
         bloodType: bloodType,   //Adding patient name and blood type in new request 
         requestDetails: requestDetails,
-        isFulfilled: false         // Adding request details and assuming the request is not fulfilled initially 
+        isFulfilled: false         // Adding request details and assuming the request is not fulfilled initially
+        requests.append(newRequest) 
         patientNameTextField.text = ""   // Resetting the patient name field to none  
         bloodTypeTextField.text = ""
         requestDetailsTextView.text = "" 
