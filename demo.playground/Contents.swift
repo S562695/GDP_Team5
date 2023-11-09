@@ -738,6 +738,14 @@ class RequestCreationViewController: UIViewController {
     class UserManagementViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {   
         
         @IBOutlet weak var tableView: UITableView!  var users: [User] = []  // providing connection to tableView and creating array
+
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "UserCell", for: indexPath)
+        let user = users[indexPath.row]
+        cell.textLabel?.text = user.username
+        // Customize cell appearance as needed
+        return cell
+    }
     
     
     
