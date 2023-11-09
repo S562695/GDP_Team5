@@ -734,7 +734,21 @@ class RequestCreationViewController: UIViewController {
         bloodTypeTextField.text = ""
         requestDetailsTextView.text = "" 
     )
-}   
+}  
+    class UserManagementViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    }
 
 
    
