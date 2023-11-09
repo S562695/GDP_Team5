@@ -735,7 +735,9 @@ class RequestCreationViewController: UIViewController {
         requestDetailsTextView.text = "" 
     )
 }  
-    class UserManagementViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {    
+    class UserManagementViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {   
+        
+        @IBOutlet weak var tableView: UITableView!  var users: [User] = []  // providing connection to tableView and creating array
     
     
     
