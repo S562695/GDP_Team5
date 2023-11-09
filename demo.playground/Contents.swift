@@ -746,19 +746,12 @@ class RequestCreationViewController: UIViewController {
         // Customize cell appearance as needed
         return cell
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedUser = users[indexPath.row]
+        // Implement code to handle user selection, e.g., navigate to a user detail view or perform admin actions.
     }
+    }
+    
 
 
    
