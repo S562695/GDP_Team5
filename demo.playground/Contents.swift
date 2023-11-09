@@ -744,18 +744,18 @@ class RequestCreationViewController: UIViewController {
         tableView.delegate = self
 
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "UserCell", for: indexPath)
-        let user = users[indexPath.row]
-        cell.textLabel?.text = user.username
-        // Customize cell appearance as needed
-        return cell
-    }
+            let cell = tableView.dequeueReusableCell(withIdentifier: "UserCell", for: indexPath)
+            let user = users[indexPath.row]
+            cell.textLabel?.text = user.username
+            // Customize cell appearance as needed
+            return cell
+        }
+            
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedUser = users[indexPath.row]
-        // Implement code to handle user selection, e.g., navigate to a user detail view or perform admin actions.
+            let selectedUser = users[indexPath.row]
+        }     
+        
+        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            return users.count
+        }
     }
-    }
-    
-
-
-   
