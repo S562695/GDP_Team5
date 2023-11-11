@@ -767,7 +767,7 @@ import AnimatedGradientView
 class AdminLoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()    }     //Adding viewDidLoad() function in AdminLoginVC.
-
+@IBOutlet weak var loginBTN: UIButton!
 
 
 
