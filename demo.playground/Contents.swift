@@ -765,8 +765,8 @@ import Lottie
 import AnimatedGradientView
 
 class AdminLoginVC: UIViewController {
-
-
+    override func viewDidLoad() {
+        super.viewDidLoad()    }     //Adding viewDidLoad() function in AdminLoginVC.
 
 
 
