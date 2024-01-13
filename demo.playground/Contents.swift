@@ -773,7 +773,10 @@ class AdminLoginVC: UIViewController {
     @IBOutlet weak var LogoAnimationView: LottieAnimationView!
     @IBOutlet weak var passwordTF: UITextField!     
 }
-class ProfileCreationViewController: UIViewController {
+class ProfileCreationViewController: UIViewController { 
+    @IBOutlet private var profileImageView: UIImageView!
+    @IBOutlet private var fullNameTextField: UITextField!
+    @IBOutlet private var lastNameTextField: UITextField!    // Creating patients profile image, fullname and lastname text fields in profile view controller
 
 
     @IBOutlet private var primaryEmailTextField: UITextField!
