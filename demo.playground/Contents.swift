@@ -771,9 +771,10 @@ class AdminLoginVC: UIViewController {
     @IBOutlet weak var loginBTN: UIButton!
     @IBOutlet weak var usernameTF: UITextField!
     @IBOutlet weak var LogoAnimationView: LottieAnimationView!
-    @IBOutlet weak var passwordTF: UITextField!   
-
-
+    @IBOutlet weak var passwordTF: UITextField!     
+}
+class ProfileCreationViewController: UIViewController {
+    
 
     
 }
