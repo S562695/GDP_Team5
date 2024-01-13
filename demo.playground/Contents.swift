@@ -776,6 +776,10 @@ class AdminLoginVC: UIViewController {
 class ProfileCreationViewController: UIViewController {
 
 
+    @IBOutlet private var primaryEmailTextField: UITextField!
+    @IBOutlet private var usernameTextField: UITextField! 
+
+
 
     @IBAction private func createProfileButtonTapped() {    }   // Creating profileButtonTrapped method in profile view controller which helps the user to access patients profile details
     
