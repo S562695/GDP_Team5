@@ -783,7 +783,9 @@ class ProfileCreationViewController: UIViewController {
 
 
     @IBAction private func createProfileButtonTapped() {    }   // Creating profileButtonTrapped method in profile view controller which helps the user to access patients profile details
-    
+    guard let fullName = fullNameTextField.text,
+              let lastName = lastNameTextField.text,
+              let primaryEmail = primaryEmailTextField.text,    // Creating fullName, lastName and primaryEmail variables and accessing the the text from text fields
 
     
 }
